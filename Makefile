@@ -9,7 +9,7 @@ SOURCES := $(shell find $(SRCDIR) -type f -name "*.$(SRCEXT)")
 TESTS := $(shell find $(TESTDIR) -type f -name "*.$(SRCEXT)")
 OBJECTS := $(patsubst $(SRCDIR)/%,$(BUILDDIR)/%,$(SOURCES:.$(SRCEXT)=.o))
 TESTOBJECTS := $(patsubst $(TESTDIR)/%,$(BUILDDIR)/%,$(TESTS:.$(SRCEXT)=.o))
-CFLAGS := -g -std=c++14 -O3 -Wl,-rpath lib/
+CFLAGS := -g -std=c++14 -O3 -Wl,-rpath,./lib/
 LIB := -lgtest -lgtest_main -lpthread -lhealthcare -Llib/
 INC := -I include/healthcaredp -I lib/genericdp -I lib/healthcare
 
