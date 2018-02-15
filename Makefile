@@ -15,7 +15,7 @@ INC := -I include/healthcaredp -I lib/genericdp -I lib/healthcare
 
 $(TARGET): $(OBJECTS)
 	@echo " Linking..."
-	@echo " $(CC) $(TARGET).$(SRCEXT) $^ -o $(TARGET) $(SRCEXT)"; $(CC) $(CFLAGS) $(TARGET).$(SRCEXT) $(INC) $^ $(LIB) -o bin/$(TARGET)
+	@echo " $(CC) $(CFLAGS) $(TARGET).$(SRCEXT) $(INC) $^ $(LIB) -o bin/$(TARGET)"; $(CC) $(CFLAGS) $(TARGET).$(SRCEXT) $(INC) $^ $(LIB) -o bin/$(TARGET)
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
 	@mkdir -p $(@D)
