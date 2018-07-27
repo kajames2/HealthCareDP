@@ -1,0 +1,59 @@
+{    
+    "max_age" : 16,
+    "max_savings" : 0,
+    "min_savings" : -70,
+    "discount" : 1,
+
+    "job" :
+    {
+	"type" : "Linear",
+	"min" : 56,
+	"intercept" : 0,
+	"slope" : 1.60
+    },
+    
+    "regeneration" :
+    {
+	"type" : "ShiftedLogisticRounded",
+	"k" : 0.012
+    },
+    
+    "degeneration" :
+    {
+	"type" : "Linear",
+	"intercept" : 8,
+	"slope" : 0
+    },
+    
+    "enjoyment" :
+    {
+	"type" : "Fractional",
+	"j" : 60
+    },
+
+    "fitness" :
+    {
+	"type" : "Defined",
+	"costs" : [0, 6, 12, 18, 24]
+    },
+    
+    "probability" :
+    {
+	"type" : "HalfHalf",
+	"p1" : 0.25,
+	"p2" : 0.41667
+    },
+    
+    "shock" :
+    {
+	"type" : "ExponentialDecay",
+	"max" : 25,
+	"rate" : 0.19
+    },
+    
+    "insurance" :
+    {
+	"type" : "Actuarial",
+	"scale" : 1.1
+    }
+}
